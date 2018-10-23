@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title></title>
-  <link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 	<nav>
@@ -11,6 +11,17 @@
 			<li><a href="aritmatika.php">Aritmatika</a></li>
 			<li><a href="perbandingan.php">Perbandingan</a></li>
 			<li><a href="sorting.php">Sorting</a></li>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+				<div class="dropdown-content">
+				<a href="#">Akram Rahardi</a>
+					<a href="#">Bella Syafira</a>
+					<a href="#">Janu Widyanata</a>
+					<a href="#">M Rizky Pratama</a>
+					<a href="#">Nadella Amelia</a>
+					<a href="#">Sheila Giovanna Namora</a>
+				</div>
+			</li>
 		</ul>
 	</nav>
 	<div class="row" ">
