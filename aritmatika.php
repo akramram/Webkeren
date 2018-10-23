@@ -5,7 +5,15 @@
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
-	<?php 
+	<nav>
+		<ul>
+			<li><a href="index.php">Home</a></li>
+			<li><a class="active" href="aritmatika.php">Aritmatika</a></li>
+			<li><a href="perbandingan.php">Perbandingan</a></li>
+			<li><a href="sorting.php">Sorting</a></li>
+		</ul>
+	</nav>
+	<?php
 	if(isset($_POST['hitung'])){
 		$bil1 = $_POST['bil1'];
 		$bil2 = $_POST['bil2'];
@@ -22,13 +30,13 @@
 			break;
 			case 'bagi':
 			$hasil = $bil1/$bil2;
-			break;			
+			break;
 		}
 	}
 	?>
 	<div class="kalkulator">
 		<h2 class="judul">KALKULATOR</h2>
-		<form method="post" action="aritmatika.php">			
+		<form method="post" action="aritmatika.php">
 			<input type="text" name="bil1" class="bil" autocomplete="off" placeholder="Masukkan Bilangan Pertama">
 			<select class="opt" name="operasi">
 				<option value="tambah">+</option>
@@ -37,13 +45,13 @@
 				<option value="bagi">/</option>
 			</select>
 			<input type="text" name="bil2" class="bil" autocomplete="off" placeholder="Masukkan Bilangan Kedua">
-			<input type="submit" name="hitung" value="Hitung" class="tombol">											
+			<input type="submit" name="hitung" value="Hitung" class="tombol">
 		</form>
 		<?php if(isset($_POST['hitung'])){ ?>
 		<input type="text" value="<?php echo $hasil; ?>" class="bil">
 		<?php }else{ ?>
 		<input type="text" value="0" class="bil">
-		<?php } ?>			
+		<?php } ?>
 	</div>
 </body>
 </html>
