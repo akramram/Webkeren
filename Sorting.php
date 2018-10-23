@@ -5,25 +5,10 @@
 	<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-	<?php
-
-	  if(isset($_POST['btnOk'])){
-
-	  $nama= $_POST['nama'];
-
-	  foreach($nama as $key => $val){
-
-	  echo 'Data ke - ' .$key. ' = '.$nama[$key].' <br/>';
-
-	  }
-
-	  }
-
-	  ?>
 
 	<form method="get" name="frm" action="">
-
-	  <input name="jumlah" type="text" />
+		<label>Banyak Data yang diinginkan : </label>
+	  <input name="jumlah" type="number" />
 
 	  <input type="submit" name="btnJumlah" value="Ok" />
 
@@ -35,13 +20,7 @@
 
 	  <!--DWLayoutTable-->
 
-	  <tr>
 
-	  <td width="32" height="22" valign="top">No</td>
-
-	  <td width="240" valign="top">Isi Array</td>
-
-	  </tr>
 
 	  <?php
 
@@ -63,9 +42,11 @@
 
 	  <tr>
 
-	  <td height="23"><?php echo $i; ?></td>
+	  <td height="23"></td>
 
-	  <td><input name="nama[]" type="text" size="30" /></td>
+	  <td>
+			<label>Data Ke - <?php echo $i; ?></label>
+			<input name="nama[]" type="text" size="30" /></td>
 
 	  </tr>
 
@@ -84,6 +65,20 @@
 	  </table>
 
 	  </form>
+<?php
+
+	  if(isset($_POST['btnOk'])){
+
+	  $nama= $_POST['nama'];
+
+	  foreach($nama as $key => $val){
+
+	  echo 'Data ke - ' .$key. ' = '.$nama[$key].' <br/>';
+
+	  }
+
+	  }
+ ?>
 
 <h1>Sorting Ascending</h1>
 <?php
