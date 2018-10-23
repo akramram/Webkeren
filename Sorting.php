@@ -5,15 +5,23 @@
 	<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-
+	<nav>
+		<ul>
+			<li><a href="index.php">Home</a></li>
+			<li><a href="aritmatika.php">Aritmatika</a></li>
+			<li><a href="perbandingan.php">Perbandingan</a></li>
+			<li><a class="active" href="sorting.php">Sorting</a></li>
+		</ul>
+	</nav>
 	<div class="kalkulator">
 		<h2 class="judul">Sorting</h2>
 
 		<form method="get" name="frm" action="Sorting.php">
 			<label style="color:white;">Banyak Data yang diinginkan : </label>
-			<input name="jumlah" class="bil" type="number" />
+			<input name="jumlah" class="bil" type="number" placeholder="Banyak Data" />
 
-			<input type="submit" name="btnJumlah" class="tombolbd"value="Ok" />
+			<input type="submit" name="btnJumlah" class="tombol" value="Ok" />
+
 
 		</form>
 
@@ -66,21 +74,26 @@
 
 				</table>
 <input type="submit" class="tombol" name="btnOk" value="Simpan" />
+<button type="reset" class="tombol" value="Reset">Reset</button>
+
 			</form>
-			<?php
+			<div style="color:white">
 
-			if(isset($_POST['btnOk'])){
+				<?php
 
-				$nama= $_POST['nama'];
+				if(isset($_POST['btnOk'])){
 
-				foreach($nama as $key => $val){
+					$nama= $_POST['nama'];
 
-					echo 'Data ke - ' .$key. ' = '.$nama[$key].' <br/>';
+					foreach($nama as $key => $val){
+
+						echo 'Data ke - ' .($key+1). ' = '.$nama[$key].' <br/>';
+
+					}
 
 				}
-
-			}
-			?>
+				?>
+			</div>
 
 
 		</div>

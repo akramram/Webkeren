@@ -5,6 +5,14 @@
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
+	<nav>
+		<ul>
+			<li><a href="index.php">Home</a></li>
+			<li><a href="aritmatika.php">Aritmatika</a></li>
+			<li><a class="active" href="perbandingan.php">Perbandingan</a></li>
+			<li><a href="sorting.php">Sorting</a></li>
+		</ul>
+	</nav>
   <?php
   if(isset($_POST['banding'])){
     $bil1 = $_POST['bil1'];

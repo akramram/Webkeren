@@ -5,6 +5,14 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+	<nav>
+		<ul>
+			<li><a class="active" href="index.php">Home</a></li>
+			<li><a href="aritmatika.php">Aritmatika</a></li>
+			<li><a href="perbandingan.php">Perbandingan</a></li>
+			<li><a href="sorting.php">Sorting</a></li>
+		</ul>
+	</nav>
 	<div class="row" style="margin:auto;">
 
 		<div class="col-3">
