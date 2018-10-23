@@ -160,11 +160,11 @@ nav ul {
     top: 0;
 }
 
-nav li {
+nav ul li {
     float: left;
 }
 
-nav li a {
+nav ul li a {
     display: block;
     text-align: center;
     padding: 14px 16px;
