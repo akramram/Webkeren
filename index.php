@@ -13,7 +13,7 @@
 			<li><a href="sorting.php">Sorting</a></li>
 		</ul>
 	</nav>
-	<div class="row" style="margin:auto;">
+	<div class="row" ">
 
 		<div class="col-3">
 
