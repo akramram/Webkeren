@@ -31,7 +31,7 @@
 			<a href="aritmatika.php">
 				<div class="card">
 
-					<img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width:100%">
+					<img src="https://image.flaticon.com/icons/png/512/227/227870.png" alt="Avatar" style="width:100%">
 					<div class="container">
 						<h4><b>Aritmatika</b></h4>
 
@@ -45,7 +45,7 @@
 			<a href="perbandingan.php">
 				<div class="card">
 
-					<img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width:100%">
+					<img src="https://image.flaticon.com/icons/svg/1205/1205499.svg" alt="Avatar" style="width:100%">
 					<div class="container">
 						<h4><b>Perbandingan</b></h4>
 
@@ -59,7 +59,7 @@
 			<a href="Sorting.php">
 				<div class="card">
 
-					<img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width:100%">
+					<img src="https://image.flaticon.com/icons/svg/1178/1178206.svg" alt="Avatar" style="width:100%">
 					<div class="container">
 						<h4><b>Sorting</b></h4>
 					</div>
