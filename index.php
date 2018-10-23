@@ -2,12 +2,12 @@
 <html>
 <head>
 	<title></title>
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 <div class="col-12">
 
-  <div class="col-3">
+  <div class="col-3" style="float:left;">
     <h1>Sorting Ascending</h1>
     <?php
     $cars = array("Volvo", "BMW", "Toyota","xride","tamiya" ,"Avanza");
@@ -21,7 +21,7 @@
     ?>
   </div>
 
-  <div class="col-3">
+  <div class="col-3" style="float:left;">
     <h1>Sorting Descending</h1>
     <?php
     $cars = array("Volvo", "BMW", "Toyota","xride","tamiya" ,"Avanza");
