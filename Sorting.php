@@ -6,108 +6,124 @@
 </head>
 <body>
 
-	<form method="get" name="frm" action="">
-		<label>Banyak Data yang diinginkan : </label>
-	  <input name="jumlah" type="number" />
+	<div class="kalkulator">
+		<h2 class="judul">Sorting</h2>
 
-	  <input type="submit" name="btnJumlah" value="Ok" />
+		<form method="get" name="frm" action="Sorting.php">
+			<label style="color:white;">Banyak Data yang diinginkan : </label>
+			<input name="jumlah" class="bil" type="number" />
 
-	  </form>
+			<input type="submit" name="btnJumlah" class="tombolbd"value="Ok" />
 
-	<form method="post" name="frmpost" action="">
+		</form>
 
-	  <table width="547" border="0" cellpadding="0" cellspacing="0">
+		<form method="post" name="frmpost" action="">
 
-	  <!--DWLayoutTable-->
+			<table width="547" border="0" cellpadding="0" cellspacing="0">
+
+				<!--DWLayoutTable-->
 
 
 
-	  <?php
+				<?php
 
-	  if(isset($_GET['jumlah']) && $_GET['jumlah']>0){
+				if(isset($_GET['jumlah']) && $_GET['jumlah']>0){
 
-	  $jumlah_form = $_GET['jumlah'];
+					$jumlah_form = $_GET['jumlah'];
 
-	  }
+				}
 
-	  else{
+				else{
 
-	  $jumlah_form = 1;
+					$jumlah_form = 1;
 
-	  }
+				}
 
-	  for($i=1; $i<=$jumlah_form; $i++){
+				for($i=1; $i<=$jumlah_form; $i++){
 
-	  ?>
+					?>
 
-	  <tr>
+					<tr>
 
-	  <td height="23"></td>
+						<td height="23"></td>
 
-	  <td>
-			<label>Data Ke - <?php echo $i; ?></label>
-			<input name="nama[]" type="text" size="30" /></td>
+						<td>
+							<label style="color:white;">Data Ke - <?php echo $i; ?></label> <br>
+							<input name="nama[]" class="bil" type="text" size="30" />
+						</td>
 
-	  </tr>
+						</tr>
 
-	  <?php
+						<?php
 
-	  }
+					}
 
-	  ?>
+					?>
 
-	  <tr>
 
-	  <td height="23" colspan="4" align="right"><input type="submit" name="btnOk" value="Simpan" /></td>
 
-	  </tr>
 
-	  </table>
 
-	  </form>
-<?php
+				</table>
+<input type="submit" class="tombol" name="btnOk" value="Simpan" />
+			</form>
+			<?php
 
-	  if(isset($_POST['btnOk'])){
+			if(isset($_POST['btnOk'])){
 
-	  $nama= $_POST['nama'];
+				$nama= $_POST['nama'];
 
-	  foreach($nama as $key => $val){
+				foreach($nama as $key => $val){
 
-	  echo 'Data ke - ' .$key. ' = '.$nama[$key].' <br/>';
+					echo 'Data ke - ' .$key. ' = '.$nama[$key].' <br/>';
 
-	  }
+				}
 
-	  }
- ?>
+			}
+			?>
 
-<h1>Sorting Ascending</h1>
-<?php
-if (empty($nama)) {
-	echo "Data Kosong";
-}else {
-	sort($nama);
-	$arrlength=count($nama);
-	for($x=0;$x<$arrlength;$x++)
-	  {
-	  echo $nama[$x];
-	  echo "<br>";
-	  }
-}
-?>
 
-<h1>Sorting Descending</h1>
-<?php
-if (empty($nama)) {
-	echo "Data Kosong";
-}else {
-	rsort($nama);
-	$arrlength=count($nama);
-	for($x=0;$x<$arrlength;$x++)
-	  {
-	  echo $nama[$x];
-	  echo "<br>";
-	  }
-}
-?>
-</body>
-</html>
+		</div>
+
+
+<div  style="color:white;">
+	<div class="col-5">
+		<div class="kalkulator">
+			<h2 class="judul">Hasil Sorting Ascending</h2>
+			<?php
+			if (empty($nama)) {
+				echo "Data Kosong";
+			}else {
+				sort($nama);
+				$arrlength=count($nama);
+				for($x=0;$x<$arrlength;$x++)
+				{
+					echo $nama[$x];
+					echo "<br>";
+				}
+			}
+			?>
+		</div>
+	</div>
+
+	<div class="col-5">
+		<div class="kalkulator">
+			<h2 class="judul">Hasil Sorting Descending</h2>
+			<?php
+			if (empty($nama)) {
+				echo "Data Kosong";
+			}else {
+				rsort($nama);
+				$arrlength=count($nama);
+				for($x=0;$x<$arrlength;$x++)
+				{
+					echo $nama[$x];
+					echo "<br>";
+				}
+			}
+			?>
+		</div>
+	</div>
+</div>
+	</body>
+	</html>

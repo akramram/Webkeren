@@ -1,8 +1,3 @@
-body{
-	background: #F2F2F2;
-	font-family: sans-serif;
-}
-
 .kalkulator{
 	width: 335px;
 	background: #2F495A;
@@ -56,6 +51,16 @@ body{
 	font-weight: normal;
 }
 
+.row {
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+		margin: auto;
+}
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
@@ -72,8 +77,9 @@ body{
 body{
 	background: #F2F2F2;
 	font-family: sans-serif;
+	margin: auto;
 }
- 
+
 .kalkulator{
 	width: 335px;
 	background: #2F495A;
@@ -82,16 +88,16 @@ body{
 	border-radius: 5px;
 	box-shadow: 0px 10px 20px 0px #D1D1D1;
 }
- 
+
 .bil{
 	width: 300px;
 	margin: 5px;
 	border: none;
 	font-size: 16pt;
 	border-radius: 5px;
-	padding: 10px;	
+	padding: 10px;
 }
- 
+
 .opt{
 	font-size: 16pt;
 	border: none;
@@ -100,7 +106,7 @@ body{
 	border-radius: 5px;
 	padding: 10px;
 }
- 
+
 .tombol{
 	background: #EC5159;
 	border-top: none;
@@ -112,7 +118,7 @@ body{
 	font-size: 15pt;
 	border-bottom:4px solid #BF3D3D;
 }
- 
+
 .brand{
 	color: #eee;
 	font-size: 11pt;
@@ -120,9 +126,23 @@ body{
 	text-decoration: none;
 	margin: 12px;
 }
- 
+
 .judul{
 	text-align: center;
 	color: #eee;
 	font-weight: normal;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+		float: left;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+    padding: 2px 16px;
 }
