@@ -17,8 +17,6 @@
   if(isset($_POST['banding'])){
     $bil1 = $_POST['bil1'];
     $bil2 = $_POST['bil2'];
-
-
   }
   ?>
 	<div class="kalkulator">
@@ -28,17 +26,17 @@
 			<input type="text" name="bil2" class="bilband" autocomplete="off" placeholder="Angka-2">
 			<input type="submit" name="banding" value="Bandingkan" class="tombolbd">
 		</form>
-		<?php if(isset($_POST['hitung'])){ ?>
-
-		<?php }else{ ?>
+		<?php if(isset($_POST['banding'])){
+			echo '<h2 class="hasilbd">Hasil Perbandingan</h2>';
+			if ($bil1 < $bil2){
+			 echo '<h2 class="hasilbd">'.$bil1 . ' Lebih Kecil dari ' . $bil2.'</h2>' ;
+		 } elseif ($bil1 > $bil2){
+				 echo '<h2 class="hasilbd">'.$bil1 . ' Lebih Besar dari ' . $bil2.'</h2>';
+			 } else {
+				 echo '<h2 class="hasilbd">'.$bil1 . ' Sama Besar dengan ' . $bil2.'</h2>';
+			 }
+		 }else{ ?>
 			<h2 class="hasilbd">Hasil Perbandingan</h2>
-      <?php if ($bil1 < $bil2){
-        echo "$bil1 Lebih Kecil dari $bil2";
-      } elseif ($bil1 > $bil2){
-        echo "$bil1 Lebih Besar dari $bil2 ";
-      } else {
-        echo "$bil1 Sama besar dengan $bil2";
-      }?>
 		<?php } ?>
 	</div>
 </body>
